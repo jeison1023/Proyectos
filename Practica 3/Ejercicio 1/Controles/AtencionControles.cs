@@ -19,12 +19,8 @@ namespace Ejercicio_1.Controles
         private int totalservivio3 = 0;
         private double totalMonto = 0;
 
-        public double montoTotallamado { get; private set; }
-
-        /// <summary>
-        /// Lista todas las atenciones 
-        /// </summary> 
-        /// <returns></returns>
+        public double montoTotallamado { get;  set; }
+   /// lista de atenciones 
         public Atencion[] ListarTodo() { return atenciones; }
 
         public int ObtenerTotalservicio1() { return totalservivio1; }
@@ -37,7 +33,7 @@ namespace Ejercicio_1.Controles
 
         public void Registrar(Atencion atencion)
         {
-            switch (atencion.Tipodeservicios)
+            switch (atencion.Tiposervicios)
             {
                 case "1":
                     atencion.Monto = 10;
@@ -57,11 +53,11 @@ namespace Ejercicio_1.Controles
             }
 
             // Aplicar incremento del 5% si el tipo de servicio es "c"
-            if (atencion.Tipodeservicios == "c") atencion.Monto *= 1.05;
+            if (atencion.Tipovehiculo=="c") atencion.Monto *= 1.05;
 
             // Agregar el monto de lavado 
             {
-                if (atencion.Tipodeservicios == "1") montoTotallamado += atencion.Monto;
+                if (atencion.Tiposervicios == "1") montoTotallamado += atencion.Monto;
                 atenciones[contador] = atencion;
                 contador++;
             }
@@ -85,9 +81,13 @@ namespace Ejercicio_1.Controles
             else if (totalservivio1 == totalservivio3 && totalservivio3 < totalservivio2)
                 return "lavado y silicona";
             else return "Todos tienen la misma demanda ";
-            
+
         }
-         
-        
+        public double ObtenerMontoPromediolavado()
+        { if (montoTotallamado == 0) return 0;
+            else return montoTotallamado / totalservivio1;
+        }
+       
+
     }
 }

@@ -15,11 +15,11 @@ namespace Ejercicio_1.Entidades
         /// <summary>
         /// Propiedad que representa el identificador de la atencion 
         /// </summary>
-        public string Tipodevehiculo { get; set; }
+        public string Tipovehiculo { get; set; }
 
-        public string Tipodeservicios { get; set; }
+        public string Tiposervicios { get; set; }
 
         public double Monto { get; set; }
-
+        
     }
 }

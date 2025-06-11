@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FF2C37B-50F5-4813-B4F9-8E963FBE50BC}</ProjectGuid>
+    <ProjectGuid>{20125709-E18F-4BEC-8652-F09F0A6749FA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejercicio_1</RootNamespace>
-    <AssemblyName>Ejercicio 1</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Registro_de_Alumnos</RootNamespace>
+    <AssemblyName>Registro de Alumnos</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controles\AtencionControles.cs" />
-    <Compile Include="Entidades\Atencion.cs" />
+    <Compile Include="controladores\AlumnoControladores.cs" />
+    <Compile Include="Entidades\Alumnos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
