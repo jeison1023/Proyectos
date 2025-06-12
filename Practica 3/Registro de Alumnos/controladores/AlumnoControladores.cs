@@ -54,7 +54,7 @@ namespace Registro_de_Alumnos.controladores
         }
         public Alumno[] BuscarPorCodigo(string codigo)
         {
-            return Array.FindAll(alumnos, alumno => alumno != null && alumno.Codigo.Contains(codigo));
+           return Array.FindAll(alumnos, alumno => alumno != null && alumno.Codigo.Contains(codigo));
         }
     }
 
